@@ -1,0 +1,22 @@
+{
+	"name": "Ubuntu",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "."
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/devcontainers/features/go:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot"
+			],
+			"settings": {
+				"go.formatTool": "goimports"
+			}
+		}
+	},
+	"postCreateCommand": "bash .devcontainer/start.sh"
+}
